@@ -1,6 +1,8 @@
 # google-assistant-hotword-raspi
 Simple Google Assistant with hotword activation from Snowboy setup for my Pi Zero W.
 
+**Note: The included snowboy is for Python 2.7 only. TODO: Make it compatible with Python 3.**
+
 # Setup
 #### 1. [Google Assistant Python setup on Raspbery Pi](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/)
   * [Configure a Developer Project and Account Settings](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/config-dev-project-and-account)
