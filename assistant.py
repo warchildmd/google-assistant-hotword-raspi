@@ -90,6 +90,7 @@ class Assistant:
             source=self.audio_source,
             sink=self.audio_sink,
             iter_size=self.audio_iter_size,
+            sample_width=self.audio_sample_width
         )
         restart = False
         continue_dialog = True
