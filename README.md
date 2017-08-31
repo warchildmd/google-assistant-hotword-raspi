@@ -1,7 +1,5 @@
 # google-assistant-hotword-raspi
-Simple Google Assistant with hotword activation from Snowboy setup for my Pi Zero W.
-
-**Note: The included snowboy is for Python 2.7 only. TODO: Make it compatible with Python 3.**
+Simple Google Assistant with hotword activation from Snowboy setup for RaspberryPi 1 and Zero W.
 
 # Setup
 #### 1. [Google Assistant Python setup on Raspbery Pi](https://developers.google.com/assistant/sdk/prototype/getting-started-pi-python/)
@@ -30,7 +28,8 @@ Simple Google Assistant with hotword activation from Snowboy setup for my Pi Zer
   * Install Google Assistant SDK + Samples
     ` python -m pip install google-assistant-sdk[samples]`
   * Get credentials
-    `python -m googlesamples.assistant.auth_helpers --client-secrets /home/pi/client_secret_XXXX.json`
+    `pip install --upgrade google-auth-oauthlib[tool]`
+    `google-oauthlib-tool --client-secrets path/to/client_secret_XXXXX.json --scope https://www.googleapis.com/auth/assistant-sdk-prototype --save --headless`
   * Test using the sample
     `python -m googlesamples.assistant`
     Issue commands after pressing `enter` and if you did all the steps above Google Assistant should respond.
@@ -48,7 +47,9 @@ Simple Google Assistant with hotword activation from Snowboy setup for my Pi Zer
     You should be able to recored audio using:
     `rec temp.wav`
 
+***PS** For Python 3 rename `_snowboydetect.so_py3` to `_snowboydetect.so`.*
+
 #### Train your own hotwords or download existing ones from https://snowboy.kitt.ai/
 
-#### 2. Run `gassistant.py` and you should have a working Google Assistant with hotword activation
+#### 3. Run `gassistant.py` and you should have a working Google Assistant with hotword activation
     `python gassistant.py models/ok_google.pmdl`
